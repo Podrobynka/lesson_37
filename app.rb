@@ -18,7 +18,8 @@ f.each_line do |line|
 end
 
 f.close
-
-@hh.each do |k,v|
-  puts "#{v} #{k}"
+hh = @hh.sort {|a1,a2| a2[1]<=>a1[1]}
+hh.each do |h|
+  puts "#{h[1]} #{h[0]}"
 end
+
